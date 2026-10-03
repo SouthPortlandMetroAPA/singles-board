@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SPM Singles Qualifiers</title>
+<meta name="description" content="South Portland Metro players who qualified on the Spring 2026 singles regional boards.">
+<meta name="color-scheme" content="light dark">
+<style>
+  /* Mobile first: one column, full-width rows, thumb-sized controls. Wider screens get columns. */
+  :root{--bg:#f7f8fa;--surface:#fff;--fg:#14171c;--muted:#5d6672;--rule:#e0e4ea;
+    --spm-primary:#ea002a;--spm-accent:#0031a1;--tint:#eef3fb;--warn:#8a5a00;--warnbg:#fdf3e0;
+    --font:'Segoe UI',system-ui,-apple-system,sans-serif}
+  @media (prefers-color-scheme:dark){:root{--bg:#0f1218;--surface:#161a21;--fg:#e6eaf0;--muted:#98a2af;
+    --rule:#242a34;--spm-primary:#ff4d68;--spm-accent:#7aa7ec;--tint:#1a2232;--warn:#e0b25e;--warnbg:#2a2113;
+    color-scheme:dark}}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);
+    font-size:16px;line-height:1.5;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 16px 48px}
+  header{padding:22px 0 14px;border-bottom:3px solid var(--spm-primary)}
+  h1{margin:0 0 6px;font-size:1.5rem;line-height:1.15;letter-spacing:-.02em}
+  .sub{color:var(--muted);font-size:.86rem;margin:0}
+  .controls{position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:5;
+    border-bottom:1px solid var(--rule);display:flex;gap:9px;align-items:center}
+  #q{flex:1;min-width:0;font:inherit;font-size:16px;padding:11px 13px;border:1px solid var(--rule);
+    border-radius:10px;background:var(--surface);color:var(--fg)}   /* 16px: stops iOS zooming on focus */
+  .tally{color:var(--muted);font-size:.8rem;white-space:nowrap}
+  details.ev{margin:18px 0 0;border:1px solid var(--rule);border-radius:12px;background:var(--surface);
+    overflow:hidden}
+  details.ev>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;
+    padding:14px 15px;font-weight:700;font-size:1.05rem;min-height:52px}
+  details.ev>summary::-webkit-details-marker{display:none}
+  details.ev>summary::before{content:"\25B8";color:var(--spm-accent);font-size:.9rem;
+    transition:transform .15s;flex:none}
+  details.ev[open]>summary::before{transform:rotate(90deg)}
+  .evname{flex:1;min-width:0}
+  .ecnt{color:#fff;background:var(--spm-primary);border-radius:999px;padding:3px 11px;
+    font-size:.78rem;font-weight:700;flex:none}
+  .grp{padding:0 15px 4px}
+  .grp h3{display:flex;align-items:center;gap:9px;margin:12px 0 7px;font-size:.9rem;font-weight:600}
+  .sl{background:var(--spm-accent);color:#fff;border-radius:6px;padding:3px 11px;font-size:.8rem;font-weight:700}
+  .cnt{color:var(--muted);font-size:.8rem;font-variant-numeric:tabular-nums}
+  .list{list-style:none;margin:0 0 12px;padding:0;display:grid;gap:6px}
+  .p{background:var(--bg);border:1px solid var(--rule);border-radius:9px;padding:11px 13px;
+    display:flex;gap:9px;align-items:baseline;flex-wrap:wrap;min-height:44px}
+  .p.gone{border-color:var(--warn);background:var(--warnbg)}
+  .nm{font-weight:600;flex:1;min-width:0}
+  .mn{color:var(--muted);font-size:.8rem;font-variant-numeric:tabular-nums}
+  .tag{font-size:.7rem;font-weight:700;color:var(--warn);width:100%}
+  .p.elim{opacity:.55}
+  .p.elim .nm{text-decoration:line-through}
+  .elimtag{font-size:.7rem;font-weight:700;color:var(--spm-primary);white-space:nowrap}
+  .none{color:var(--muted);padding:24px 0;text-align:center}
+  footer{color:var(--muted);font-size:.78rem;margin-top:26px;padding-top:14px;border-top:1px solid var(--rule)}
+  @media (min-width:640px){
+    .wrap{padding-inline:22px}
+    h1{font-size:1.9rem}
+    .list{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+    .p{padding:8px 12px;min-height:0}
+  }
+  @media print{.controls{display:none}body{background:#fff;font-size:11px}
+    details.ev{border:0}.p{break-inside:avoid}.list{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>SPM Singles Qualifiers</h1>
+    <p class="sub">57 players · 77 board places · Spring 2026 boards</p>
+  </header>
+  <div class="controls">
+    <input id="q" type="search" placeholder="Search by name…" aria-label="Search by name" autocomplete="off">
+    <span class="tally" id="tally"></span>
+  </div>
+  <details class="ev" open><summary><span class="evname">8-Ball Classic</span><span class="ecnt">36</span></summary><div class="grp"><h3><span class="sl">SL 6</span><span class="cnt">12</span></h3><ul class="list"><li class="p" data-k="k011"><span class="nm">Christopher Ravins</span></li><li class="p" data-k="k036"><span class="nm">Douglas Taylor</span></li><li class="p" data-k="k016"><span class="nm">James Bean</span></li><li class="p" data-k="k009"><span class="nm">Kevin Blodgett</span></li><li class="p" data-k="k019"><span class="nm">Luis Cruz Erasto</span></li><li class="p" data-k="k001"><span class="nm">Noe Torres</span></li><li class="p" data-k="k032"><span class="nm">Obed Sanchez</span></li><li class="p" data-k="k003"><span class="nm">Shaun Holowati</span></li><li class="p" data-k="k006"><span class="nm">Shawn Kellar</span></li><li class="p" data-k="k005"><span class="nm">Stacy Enriquez</span></li><li class="p" data-k="k029"><span class="nm">Tracy Danielson</span></li><li class="p" data-k="k015"><span class="nm">Zach VanDyke</span></li></ul></div><div class="grp"><h3><span class="sl">SL 5</span><span class="cnt">8</span></h3><ul class="list"><li class="p" data-k="k035"><span class="nm">Alfred Epps</span></li><li class="p" data-k="k028"><span class="nm">Kyle Holowati</span></li><li class="p" data-k="k008"><span class="nm">MacKenzie Hornych</span></li><li class="p gone" data-k="k014"><span class="nm">Melinda Coker</span><span class="tag">not playing this session</span></li><li class="p gone" data-k="k004"><span class="nm">Nick Skellenger</span><span class="tag">not playing this session</span></li><li class="p" data-k="k018"><span class="nm">Ricardo Torres</span></li><li class="p" data-k="k002"><span class="nm">Steven Ross</span></li><li class="p" data-k="k022"><span class="nm">Thomas Black</span></li></ul></div><div class="grp"><h3><span class="sl">SL 4</span><span class="cnt">8</span></h3><ul class="list"><li class="p" data-k="k027"><span class="nm">Brandon Holowati</span></li><li class="p" data-k="k026"><span class="nm">Cheyenne Mackenzie</span></li><li class="p" data-k="k024"><span class="nm">Chris Culbertson</span></li><li class="p" data-k="k021"><span class="nm">Crystal Weisenborn</span></li><li class="p" data-k="k010"><span class="nm">Hannah Gelok</span></li><li class="p" data-k="k030"><span class="nm">Jim Ehmann</span></li><li class="p" data-k="k031"><span class="nm">Ricardo schroeder Ju</span></li><li class="p" data-k="k007"><span class="nm">Robert Skelton</span></li></ul></div><div class="grp"><h3><span class="sl">SL 3</span><span class="cnt">8</span></h3><ul class="list"><li class="p" data-k="k034"><span class="nm">Dakota French</span></li><li class="p" data-k="k023"><span class="nm">Dinara White</span></li><li class="p gone" data-k="k025"><span class="nm">Francisco Couto</span><span class="tag">not playing this session</span></li><li class="p" data-k="k013"><span class="nm">Kathryn Peterson</span></li><li class="p" data-k="k020"><span class="nm">Leslie Younger</span></li><li class="p" data-k="k017"><span class="nm">Michele Clothier</span></li><li class="p" data-k="k033"><span class="nm">Natalie Hawkins</span></li><li class="p" data-k="k012"><span class="nm">Tosha Bunger</span></li></ul></div></details><details class="ev" open><summary><span class="evname">9-Ball Shootout</span><span class="ecnt">41</span></summary><div class="grp"><h3><span class="sl">SL 9</span><span class="cnt">2</span></h3><ul class="list"><li class="p" data-k="k050"><span class="nm">Chris Lytsell</span></li><li class="p" data-k="k057"><span class="nm">David McKiernan</span></li></ul></div><div class="grp"><h3><span class="sl">SL 8</span><span class="cnt">1</span></h3><ul class="list"><li class="p" data-k="k053"><span class="nm">Brandon Roben</span></li></ul></div><div class="grp"><h3><span class="sl">SL 7</span><span class="cnt">6</span></h3><ul class="list"><li class="p" data-k="k047"><span class="nm">Alan Aavedal</span></li><li class="p" data-k="k046"><span class="nm">Charles Roberts</span></li><li class="p" data-k="k048"><span class="nm">Christopher Ravins</span></li><li class="p" data-k="k045"><span class="nm">Justin Willhite</span></li><li class="p" data-k="k041"><span class="nm">Shawn Kellar</span></li><li class="p" data-k="k056"><span class="nm">Zach VanDyke</span></li></ul></div><div class="grp"><h3><span class="sl">SL 6</span><span class="cnt">8</span></h3><ul class="list"><li class="p" data-k="k052"><span class="nm">Chad Clemenson</span></li><li class="p" data-k="k074"><span class="nm">Johnathan Jones</span></li><li class="p" data-k="k060"><span class="nm">Luis Cruz Erasto</span></li><li class="p" data-k="k070"><span class="nm">Michaelalisson Da Sil</span></li><li class="p" data-k="k076"><span class="nm">Obed Sanchez</span></li><li class="p" data-k="k040"><span class="nm">Shaun Holowati</span></li><li class="p" data-k="k037"><span class="nm">Todd Smith</span></li><li class="p" data-k="k071"><span class="nm">Yutao Shi</span></li></ul></div><div class="grp"><h3><span class="sl">SL 5</span><span class="cnt">9</span></h3><ul class="list"><li class="p" data-k="k055"><span class="nm">Alexander Bancroft</span></li><li class="p gone" data-k="k063"><span class="nm">Cary Horton</span><span class="tag">not playing this session</span></li><li class="p" data-k="k072"><span class="nm">Jim Ehmann</span></li><li class="p" data-k="k044"><span class="nm">MacKenzie Hornych</span></li><li class="p" data-k="k051"><span class="nm">Mark Swetzof</span></li><li class="p gone" data-k="k054"><span class="nm">Melinda Coker</span><span class="tag">not playing this session</span></li><li class="p" data-k="k075"><span class="nm">Stephen Harrison</span></li><li class="p" data-k="k038"><span class="nm">Steven Ross</span></li><li class="p" data-k="k069"><span class="nm">Tracy Danielson</span></li></ul></div><div class="grp"><h3><span class="sl">SL 4</span><span class="cnt">8</span></h3><ul class="list"><li class="p" data-k="k065"><span class="nm">Brandon Holowati</span></li><li class="p gone" data-k="k064"><span class="nm">Francisco Couto</span><span class="tag">not playing this session</span></li><li class="p" data-k="k067"><span class="nm">Kyle Holowati</span></li><li class="p" data-k="k073"><span class="nm">Ricardo schroeder Ju</span></li><li class="p" data-k="k043"><span class="nm">Robert Skelton</span></li><li class="p" data-k="k058"><span class="nm">Sam Swetzof</span></li><li class="p" data-k="k077"><span class="nm">Trevor Lane</span></li><li class="p" data-k="k066"><span class="nm">Van Velarde</span></li></ul></div><div class="grp"><h3><span class="sl">SL 3</span><span class="cnt">5</span></h3><ul class="list"><li class="p" data-k="k068"><span class="nm">Chris Lessick</span></li><li class="p" data-k="k062"><span class="nm">Crystal Weisenborn</span></li><li class="p" data-k="k042"><span class="nm">Mable Lee</span></li><li class="p" data-k="k039"><span class="nm">Onessia Elliott</span></li><li class="p" data-k="k049"><span class="nm">Tosha Bunger</span></li></ul></div><div class="grp"><h3><span class="sl">SL 2</span><span class="cnt">2</span></h3><ul class="list"><li class="p" data-k="k061"><span class="nm">Leslie Younger</span></li><li class="p" data-k="k059"><span class="nm">Michele Clothier</span></li></ul></div></details>
+  <p class="none" id="none" hidden>No one matches that.</p>
+  <footer>
+    South Portland Metro APA · 4 listed players are not on a roster this session · updated 2026-10-03
+  </footer>
+</div>
+<script>
+(function(){
+  var q=document.getElementById('q');
+  function f(){
+    var s=q.value.trim().toLowerCase(), vis=0;
+    document.querySelectorAll('details.ev').forEach(function(ev){
+      var en=0;
+      ev.querySelectorAll('.grp').forEach(function(g){
+        var n=0;
+        g.querySelectorAll('.p').forEach(function(li){
+          var hit=!s||li.textContent.toLowerCase().indexOf(s)>=0; li.hidden=!hit; if(hit)n++;
+        });
+        g.hidden=n===0; g.querySelector('.cnt').textContent=n; en+=n;
+      });
+      ev.hidden=en===0; ev.querySelector('.ecnt').textContent=en;
+      if(s&&en)ev.open=true;
+      vis+=en;
+    });
+    document.getElementById('none').hidden=vis>0;
+    document.getElementById('tally').textContent=vis+'/77';
+  }
+  q.addEventListener('input',f); f();
+  /* Live elimination state. Reads slate.singles_eliminations with the ANON key, which can select only
+     (event, public_key, eliminated, updated_at) -- the member number is not grantable to anon, so this
+     page cannot carry one even by accident. Keyed on the opaque build-time token, never on a name. */
+  var SB='https://dqzbekoaysgaiqljueac.supabase.co', AK='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRxemJla29heXNnYWlxbGp1ZWFjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxNzA5NzgsImV4cCI6MjA5MDc0Njk3OH0.cCdGxZ4zEFzU_r6lWSDeoNWG67Q4MSYCAtpds035dfU';
+  function paint(out){
+    document.querySelectorAll('.p[data-k]').forEach(function(li){
+      var isOut=out.has(li.dataset.k);
+      li.classList.toggle('elim',isOut);
+      var t=li.querySelector('.elimtag');
+      if(isOut&&!t){var e=document.createElement('span');e.className='elimtag';e.textContent='out';li.appendChild(e);}
+      if(!isOut&&t)t.remove();
+    });
+  }
+  function pull(){
+    if(document.hidden)return;
+    fetch(SB+'/rest/v1/singles_eliminations?select=public_key,eliminated',{headers:{apikey:AK,Authorization:'Bearer '+AK,'Accept-Profile':'slate'}})
+      .then(function(r){return r.ok?r.json():null})
+      .then(function(rows){ if(rows) paint(new Set(rows.filter(function(x){return x.eliminated}).map(function(x){return x.public_key}))); })
+      .catch(function(){});
+  }
+  pull(); setInterval(pull,30000);
+  document.addEventListener('visibilitychange',function(){ if(!document.hidden) pull(); });
+})();
+</script>
+</body>
+</html>
